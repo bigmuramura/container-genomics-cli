@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  agc:
+    build:
+      context: ./genomics-cli
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workspace:cached
+      - ~/.aws:/root/.aws
+    tty: true
